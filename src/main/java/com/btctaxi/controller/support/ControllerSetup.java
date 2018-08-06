@@ -1,4 +1,5 @@
-package genesis.accounting.controller.support;
+package com.btctaxi.controller.support;
+
 
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.web.bind.WebDataBinder;

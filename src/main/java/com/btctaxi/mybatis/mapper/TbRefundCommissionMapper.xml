@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.TbRefundCommissionMapper" >
+  <resultMap id="BaseResultMap" type="domain.TbRefundCommission" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="sub_user_id" property="subUserId" jdbcType="BIGINT" />
+    <result column="sub_email" property="subEmail" jdbcType="VARCHAR" />
+    <result column="invitor_id" property="invitorId" jdbcType="BIGINT" />
+    <result column="invitor_email" property="invitorEmail" jdbcType="VARCHAR" />
+    <result column="pair_name" property="pairName" jdbcType="VARCHAR" />
+    <result column="fee_tb" property="feeTb" jdbcType="DECIMAL" />
+    <result column="fee_currency" property="feeCurrency" jdbcType="DECIMAL" />
+    <result column="fee_product" property="feeProduct" jdbcType="DECIMAL" />
+    <result column="refund_commission_rate" property="refundCommissionRate" jdbcType="DECIMAL" />
+    <result column="refund_commission_amount" property="refundCommissionAmount" jdbcType="DECIMAL" />
+    <result column="refund_profit_rate" property="refundProfitRate" jdbcType="DECIMAL" />
+    <result column="refund_profit_amount" property="refundProfitAmount" jdbcType="DECIMAL" />
+    <result column="mine_rate" property="mineRate" jdbcType="DECIMAL" />
+    <result column="mine_amount" property="mineAmount" jdbcType="DECIMAL" />
+    <result column="create_time" property="createTime" jdbcType="DATE" />
+    <result column="commission_unit" property="commissionUnit" jdbcType="VARCHAR" />
+    <result column="mine_unit" property="mineUnit" jdbcType="VARCHAR" />
+    <result column="order_id" property="orderId" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, sub_user_id, sub_email, invitor_id, invitor_email, pair_name, fee_tb, fee_currency, 
+    fee_product, refund_commission_rate, refund_commission_amount, refund_profit_rate, 
+    refund_profit_amount, mine_rate, mine_amount, create_time, commission_unit, mine_unit, 
+    order_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tb_refund_commission
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tb_refund_commission
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="domain.TbRefundCommission" >
+    insert into tb_refund_commission (id, sub_user_id, sub_email, 
+      invitor_id, invitor_email, pair_name, 
+      fee_tb, fee_currency, fee_product, 
+      refund_commission_rate, refund_commission_amount, 
+      refund_profit_rate, refund_profit_amount, mine_rate, 
+      mine_amount, create_time, commission_unit, 
+      mine_unit, order_id)
+    values (#{id,jdbcType=BIGINT}, #{subUserId,jdbcType=BIGINT}, #{subEmail,jdbcType=VARCHAR}, 
+      #{invitorId,jdbcType=BIGINT}, #{invitorEmail,jdbcType=VARCHAR}, #{pairName,jdbcType=VARCHAR}, 
+      #{feeTb,jdbcType=DECIMAL}, #{feeCurrency,jdbcType=DECIMAL}, #{feeProduct,jdbcType=DECIMAL}, 
+      #{refundCommissionRate,jdbcType=DECIMAL}, #{refundCommissionAmount,jdbcType=DECIMAL}, 
+      #{refundProfitRate,jdbcType=DECIMAL}, #{refundProfitAmount,jdbcType=DECIMAL}, #{mineRate,jdbcType=DECIMAL}, 
+      #{mineAmount,jdbcType=DECIMAL}, #{createTime,jdbcType=DATE}, #{commissionUnit,jdbcType=VARCHAR}, 
+      #{mineUnit,jdbcType=VARCHAR}, #{orderId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="domain.TbRefundCommission" >
+    insert into tb_refund_commission
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="subUserId != null" >
+        sub_user_id,
+      </if>
+      <if test="subEmail != null" >
+        sub_email,
+      </if>
+      <if test="invitorId != null" >
+        invitor_id,
+      </if>
+      <if test="invitorEmail != null" >
+        invitor_email,
+      </if>
+      <if test="pairName != null" >
+        pair_name,
+      </if>
+      <if test="feeTb != null" >
+        fee_tb,
+      </if>
+      <if test="feeCurrency != null" >
+        fee_currency,
+      </if>
+      <if test="feeProduct != null" >
+        fee_product,
+      </if>
+      <if test="refundCommissionRate != null" >
+        refund_commission_rate,
+      </if>
+      <if test="refundCommissionAmount != null" >
+        refund_commission_amount,
+      </if>
+      <if test="refundProfitRate != null" >
+        refund_profit_rate,
+      </if>
+      <if test="refundProfitAmount != null" >
+        refund_profit_amount,
+      </if>
+      <if test="mineRate != null" >
+        mine_rate,
+      </if>
+      <if test="mineAmount != null" >
+        mine_amount,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="commissionUnit != null" >
+        commission_unit,
+      </if>
+      <if test="mineUnit != null" >
+        mine_unit,
+      </if>
+      <if test="orderId != null" >
+        order_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="subUserId != null" >
+        #{subUserId,jdbcType=BIGINT},
+      </if>
+      <if test="subEmail != null" >
+        #{subEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="invitorId != null" >
+        #{invitorId,jdbcType=BIGINT},
+      </if>
+      <if test="invitorEmail != null" >
+        #{invitorEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="pairName != null" >
+        #{pairName,jdbcType=VARCHAR},
+      </if>
+      <if test="feeTb != null" >
+        #{feeTb,jdbcType=DECIMAL},
+      </if>
+      <if test="feeCurrency != null" >
+        #{feeCurrency,jdbcType=DECIMAL},
+      </if>
+      <if test="feeProduct != null" >
+        #{feeProduct,jdbcType=DECIMAL},
+      </if>
+      <if test="refundCommissionRate != null" >
+        #{refundCommissionRate,jdbcType=DECIMAL},
+      </if>
+      <if test="refundCommissionAmount != null" >
+        #{refundCommissionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="refundProfitRate != null" >
+        #{refundProfitRate,jdbcType=DECIMAL},
+      </if>
+      <if test="refundProfitAmount != null" >
+        #{refundProfitAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="mineRate != null" >
+        #{mineRate,jdbcType=DECIMAL},
+      </if>
+      <if test="mineAmount != null" >
+        #{mineAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=DATE},
+      </if>
+      <if test="commissionUnit != null" >
+        #{commissionUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="mineUnit != null" >
+        #{mineUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="orderId != null" >
+        #{orderId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="domain.TbRefundCommission" >
+    update tb_refund_commission
+    <set >
+      <if test="subUserId != null" >
+        sub_user_id = #{subUserId,jdbcType=BIGINT},
+      </if>
+      <if test="subEmail != null" >
+        sub_email = #{subEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="invitorId != null" >
+        invitor_id = #{invitorId,jdbcType=BIGINT},
+      </if>
+      <if test="invitorEmail != null" >
+        invitor_email = #{invitorEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="pairName != null" >
+        pair_name = #{pairName,jdbcType=VARCHAR},
+      </if>
+      <if test="feeTb != null" >
+        fee_tb = #{feeTb,jdbcType=DECIMAL},
+      </if>
+      <if test="feeCurrency != null" >
+        fee_currency = #{feeCurrency,jdbcType=DECIMAL},
+      </if>
+      <if test="feeProduct != null" >
+        fee_product = #{feeProduct,jdbcType=DECIMAL},
+      </if>
+      <if test="refundCommissionRate != null" >
+        refund_commission_rate = #{refundCommissionRate,jdbcType=DECIMAL},
+      </if>
+      <if test="refundCommissionAmount != null" >
+        refund_commission_amount = #{refundCommissionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="refundProfitRate != null" >
+        refund_profit_rate = #{refundProfitRate,jdbcType=DECIMAL},
+      </if>
+      <if test="refundProfitAmount != null" >
+        refund_profit_amount = #{refundProfitAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="mineRate != null" >
+        mine_rate = #{mineRate,jdbcType=DECIMAL},
+      </if>
+      <if test="mineAmount != null" >
+        mine_amount = #{mineAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=DATE},
+      </if>
+      <if test="commissionUnit != null" >
+        commission_unit = #{commissionUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="mineUnit != null" >
+        mine_unit = #{mineUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="orderId != null" >
+        order_id = #{orderId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="domain.TbRefundCommission" >
+    update tb_refund_commission
+    set sub_user_id = #{subUserId,jdbcType=BIGINT},
+      sub_email = #{subEmail,jdbcType=VARCHAR},
+      invitor_id = #{invitorId,jdbcType=BIGINT},
+      invitor_email = #{invitorEmail,jdbcType=VARCHAR},
+      pair_name = #{pairName,jdbcType=VARCHAR},
+      fee_tb = #{feeTb,jdbcType=DECIMAL},
+      fee_currency = #{feeCurrency,jdbcType=DECIMAL},
+      fee_product = #{feeProduct,jdbcType=DECIMAL},
+      refund_commission_rate = #{refundCommissionRate,jdbcType=DECIMAL},
+      refund_commission_amount = #{refundCommissionAmount,jdbcType=DECIMAL},
+      refund_profit_rate = #{refundProfitRate,jdbcType=DECIMAL},
+      refund_profit_amount = #{refundProfitAmount,jdbcType=DECIMAL},
+      mine_rate = #{mineRate,jdbcType=DECIMAL},
+      mine_amount = #{mineAmount,jdbcType=DECIMAL},
+      create_time = #{createTime,jdbcType=DATE},
+      commission_unit = #{commissionUnit,jdbcType=VARCHAR},
+      mine_unit = #{mineUnit,jdbcType=VARCHAR},
+      order_id = #{orderId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

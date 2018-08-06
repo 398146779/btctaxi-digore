@@ -1,7 +1,7 @@
-package genesis.accounting.controller.support;
+package com.btctaxi.controller.support;
 
 
-public enum ErrorCodeEnum implements EnumBehaviour {
+public enum ErrorCodeEnum implements com.btctaxi.controller.support.EnumBehaviour {
     SERVER_ERROR(500, "服务器繁忙"),
 
     PARAMS_ERROR(1001, "参数异常"),

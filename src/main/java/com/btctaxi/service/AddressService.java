@@ -1,9 +1,9 @@
 package com.btctaxi.service;
 
 import com.alibaba.fastjson.JSONObject;
-import genesis.accounting.config.WalletConfig;
-import genesis.common.Data;
-import genesis.common.DataMap;
+import com.btctaxi.common.Data;
+import com.btctaxi.common.DataMap;
+import com.btctaxi.config.WalletConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.stereotype.Service;
@@ -61,6 +61,7 @@ public class AddressService {
 
         return result;
     }
+
     /**
      * 取得用户地址
      */

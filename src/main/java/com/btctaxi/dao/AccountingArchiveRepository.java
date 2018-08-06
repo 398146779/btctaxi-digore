@@ -1,6 +1,6 @@
 package com.btctaxi.dao;
 
-import genesis.accounting.domain.AccountingArchive;
+import com.btctaxi.domain.AccountingArchive;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

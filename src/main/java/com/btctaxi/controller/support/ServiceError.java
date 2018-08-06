@@ -1,4 +1,5 @@
-package genesis.accounting.controller.support;
+package com.btctaxi.controller.support;
+
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

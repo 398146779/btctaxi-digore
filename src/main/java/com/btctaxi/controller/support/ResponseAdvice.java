@@ -1,4 +1,5 @@
-package genesis.accounting.controller.support;
+package com.btctaxi.controller.support;
+
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
@@ -23,8 +24,8 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
         log.error(err.getMessage(), err);
         Map<String, Object> map = new HashMap<>();
 
-        if ((err instanceof ServiceError)) {
-            ServiceError error = (ServiceError) err;
+        if ((err instanceof com.btctaxi.controller.support.ServiceError)) {
+            com.btctaxi.controller.support.ServiceError error = (com.btctaxi.controller.support.ServiceError) err;
             map.put("code", error.getCode());
             map.put("data", null);
             map.put("error", error.getMsg());
