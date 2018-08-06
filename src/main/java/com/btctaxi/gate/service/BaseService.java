@@ -1,8 +1,8 @@
 package com.btctaxi.gate.service;
 
-import genesis.common.Data;
-import genesis.gate.config.DistConfig;
-import genesis.gate.util.SMS;
+import com.btctaxi.common.Data;
+import com.btctaxi.gate.config.DistConfig;
+import com.btctaxi.gate.util.SMS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

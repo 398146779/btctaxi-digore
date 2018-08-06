@@ -2,8 +2,8 @@ package com.btctaxi.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import genesis.accounting.config.ConstantUtils;
-import genesis.accounting.config.WalletConfig;
+import com.btctaxi.config.ConstantUtils;
+import com.btctaxi.config.WalletConfig;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;

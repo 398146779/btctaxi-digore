@@ -1,7 +1,7 @@
-package genesis.accounting.controller.tb;
+package com.btctaxi.controller.tb;
 
-import genesis.accounting.service.tb.PreSellService;
-import genesis.common.Data;
+import com.btctaxi.service.tb.PreSellService;
+import com.btctaxi.common.Data;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package genesis.accounting.controller;
+package com.btctaxi.controller;
 
 import genesis.accounting.service.BalanceService;
 import genesis.common.DataMap;

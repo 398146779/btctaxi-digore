@@ -1,7 +1,7 @@
 package com.btctaxi.dao.tb;
 
-import genesis.accounting.domain.tb.TbTransaction;
-import genesis.accounting.domain.tb.TbTransactionPK;
+import com.btctaxi.domain.tb.TbTransaction;
+import com.btctaxi.domain.tb.TbTransactionPK;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

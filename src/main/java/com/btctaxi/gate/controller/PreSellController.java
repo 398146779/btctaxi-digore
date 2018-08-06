@@ -1,6 +1,6 @@
 package com.btctaxi.gate.controller;
 
-import genesis.gate.service.PreSellService;
+import com.btctaxi.gate.service.PreSellService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

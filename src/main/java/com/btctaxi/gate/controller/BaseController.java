@@ -1,6 +1,6 @@
 package com.btctaxi.gate.controller;
 
-import genesis.gate.controller.support.Session;
+import com.btctaxi.gate.controller.support.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.annotation.ElementType;
