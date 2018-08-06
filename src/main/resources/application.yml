@@ -1,0 +1,70 @@
+# server
+server:
+  address: 0.0.0.0
+  port: 8000
+  undertow:
+    accesslog:
+      enabled: true
+      dir: /tmp/
+
+
+spring:
+  resources:
+    add-mappings: false
+  # default redis
+  redis:
+    host: localhost
+    port: 6379
+  jpa:
+      open-in-view: false
+      generate-ddl: false
+      hibernate:
+        ddl-auto: none
+        use-new-id-generator-mappings: false
+      properties:
+        hibernate:
+          enable_lazy_load_no_trans: true
+  jackson:
+    property-naming-strategy: com.fasterxml.jackson.databind.PropertyNamingStrategy.SnakeCaseStrategy
+# sharding
+datasource:
+  properties:
+    sql.show: true
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  column-name: user_id
+  tables: accounting_deposit_address,accounting_balance,accounting_balance_lock,accounting_deposit,accounting_withdraw_quota,accounting_withdraw,accounting_transfer,tb_order,tb_transaction
+  key-generator-tables: accounting_deposit,accounting_withdraw,accounting_transfer
+  node:
+    jdbc-url: jdbc:mysql:replication://127.0.0.1/gate?autoReconnect=true&useSSL=false
+    username: root
+    password:
+    maximum-pool-size: 1
+  nodes:
+    -
+      jdbc-url: jdbc:mysql:replication://127.0.0.1/shard_0?autoReconnect=true&useSSL=false
+      username: root
+      password:
+      maximum-pool-size: 1
+    -
+      jdbc-url: jdbc:mysql:replication://127.0.0.1/shard_1?autoReconnect=true&useSSL=false
+      username: root
+      password:
+      maximum-pool-size: 1
+
+logging:
+  file: ~/log/accounting.log
+  level:
+    genesis.*: debug
+
+# wallet config info
+wallet:
+  host: http://13.112.229.61:2345
+  key: 0a8d323dba1d072c9e39e201fabf25ed
+  secret: 433f42a855e3f858c69be450f4f040a94d9803159f988e145af3e53d93ed3868
+  check-host: http://13.112.229.61:5432
+  eos-address: ha2tinzrgige
+  query-url: http://13.112.229.61:5432/
+  allow_transfer: 123
+
+common:
+  change-rate-url: https://api.btctaxi.com/v2/exchange/currencies
