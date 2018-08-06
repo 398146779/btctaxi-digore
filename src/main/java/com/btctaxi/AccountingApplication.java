@@ -1,4 +1,4 @@
-package genesis.accounting;
+package com.btctaxi;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -6,32 +6,29 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
-import org.springframework.web.client.RestTemplate;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+//import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class, DataSourceAutoConfiguration.class}, scanBasePackages = "genesis")
+@SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class, DataSourceAutoConfiguration.class}, scanBasePackages = "com")
 @EnableAsync
 @EnableAutoConfiguration
 //@EnableEurekaServer
 //@EnableDiscoveryClient
-@EnableSwagger2
+//@EnableSwagger2
 @Configuration
-@MapperScan("genesis.accounting.domain")
+@MapperScan("com.btctaxi.domain")
 public class AccountingApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(AccountingApplication.class, args);
         ctx.registerShutdownHook();
     }
 
-    @Bean
-    RestTemplate http(RestTemplateBuilder builder) {
-        return builder.build();
-    }
+//    @Bean
+//    RestTemplate http(RestTemplateBuilder builder) {
+//        return builder.build();
+//    }
 
 
 //    @Bean
