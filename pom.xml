@@ -21,31 +21,16 @@
         <servlet.version>3.1.0</servlet.version>
 
     </properties>
-    <!-- 设定主仓库 -->
-    <repositories>
-        <!-- nexus私服 -->
-        <repository>
-            <id> public</id>
-            <url> http://btctaxi.online:8081/nexus/content/groups/public/ </url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
 
-    </repositories>
     <!-- 自动打包 -->
     <distributionManagement>
         <repository>
-            <id>bactaxi-releases </id>
+            <id>nexus-releases</id>
             <url> http://btctaxi.online:8081/nexus/content/repositories/releases </url>
         </repository>
-
         <snapshotRepository>
-            <id>btctaxi-snapshots </id>
-            <url> http://btctaxi.online:8081/nexus/content/repositories/snapshots </url>
+            <id>nexus-snapshots</id>
+            <url>http://btctaxi.online:8081/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -66,16 +51,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.29</version>
-        </dependency>
-        <dependency>
-            <groupId>com.binance.api</groupId>
-            <artifactId>binance-api-client</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.huobi.api</groupId>
-            <artifactId>huobi-java-api</artifactId>
-            <version>1.0.2</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
