@@ -1,8 +1,8 @@
 package com.btctaxi.gate.util;
 
-import genesis.gate.vendor.AmazonSMS;
-import genesis.gate.vendor.Twilio;
-import genesis.gate.vendor.YunPian;
+import com.btctaxi.gate.vendor.AmazonSMS;
+import com.btctaxi.gate.vendor.Twilio;
+import com.btctaxi.gate.vendor.YunPian;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 

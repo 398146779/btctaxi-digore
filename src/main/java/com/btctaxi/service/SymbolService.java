@@ -2,9 +2,9 @@ package com.btctaxi.service;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import genesis.accounting.config.RedisKeyConfig;
-import genesis.common.Data;
-import genesis.common.DataMap;
+import com.btctaxi.config.RedisKeyConfig;
+import com.btctaxi.common.Data;
+import com.btctaxi.common.DataMap;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;

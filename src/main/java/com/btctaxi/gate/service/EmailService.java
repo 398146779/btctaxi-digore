@@ -1,7 +1,7 @@
 package com.btctaxi.gate.service;
 
-import genesis.gate.config.DistConfig;
-import genesis.gate.config.EmailTemplate;
+import com.btctaxi.gate.config.DistConfig;
+import com.btctaxi.gate.config.EmailTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;

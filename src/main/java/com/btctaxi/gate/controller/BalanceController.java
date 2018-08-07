@@ -2,7 +2,7 @@ package com.btctaxi.gate.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import genesis.gate.service.BalanceService;
+import com.btctaxi.gate.service.BalanceService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

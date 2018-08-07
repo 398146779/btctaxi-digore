@@ -1,7 +1,7 @@
 package com.btctaxi.controller;
 
-import genesis.accounting.service.BalanceService;
-import genesis.common.DataMap;
+import com.btctaxi.service.BalanceService;
+import com.btctaxi.common.DataMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
