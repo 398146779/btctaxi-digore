@@ -1,8 +1,8 @@
-package genesis.accounting.controller;
+package com.btctaxi.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import genesis.accounting.service.EosRamService;
-import genesis.common.DataMap;
+import com.btctaxi.service.EosRamService;
+import com.btctaxi.common.DataMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
