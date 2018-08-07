@@ -1,8 +1,8 @@
 package com.btctaxi.gate.controller.support;
 
-import genesis.gate.error.BadRequestError;
-import genesis.gate.error.ConcurrentError;
-import genesis.gate.error.ServiceError;
+import com.btctaxi.gate.error.BadRequestError;
+import com.btctaxi.gate.error.ConcurrentError;
+import com.btctaxi.gate.error.ServiceError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
