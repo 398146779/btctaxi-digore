@@ -1,8 +1,8 @@
 package com.btctaxi.gate.service;
 
 
-import genesis.common.DataMap;
-import genesis.gate.error.ServiceError;
+import com.btctaxi.common.DataMap;
+import com.btctaxi.gate.error.ServiceError;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

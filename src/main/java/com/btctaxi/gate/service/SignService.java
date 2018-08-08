@@ -2,12 +2,12 @@ package com.btctaxi.gate.service;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import genesis.common.DataMap;
-import genesis.gate.controller.support.Session;
-import genesis.gate.error.ServiceError;
-import genesis.gate.util.Convert;
+import com.btctaxi.common.DataMap;
+import com.btctaxi.gate.controller.support.Session;
+import com.btctaxi.gate.error.ServiceError;
+import com.btctaxi.gate.util.Convert;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.springframework.session.FindByIndexNameSessionRepository;
+//import org.springframework.session.FindByIndexNameSessionRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

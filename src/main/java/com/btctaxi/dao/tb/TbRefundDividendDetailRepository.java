@@ -1,6 +1,6 @@
 package com.btctaxi.dao.tb;
 
-import genesis.accounting.domain.tb.TbRefundDividendDetail;
+import com.btctaxi.domain.tb.TbRefundDividendDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

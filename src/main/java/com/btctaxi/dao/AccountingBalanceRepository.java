@@ -1,7 +1,7 @@
 package com.btctaxi.dao;
 
-import genesis.accounting.domain.AccountingBalance;
-import genesis.accounting.domain.AccountingBalancePK;
+import com.btctaxi.domain.AccountingBalance;
+import com.btctaxi.domain.AccountingBalancePK;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.btctaxi.gate.vendor;
 
-import genesis.gate.config.SMSConfig;
+import com.btctaxi.gate.config.SMSConfig;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;

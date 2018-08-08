@@ -1,7 +1,7 @@
 package com.btctaxi.gate.controller;
 
 import com.alibaba.fastjson.JSONArray;
-import genesis.gate.service.CurrencyService;
+import com.btctaxi.gate.service.CurrencyService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

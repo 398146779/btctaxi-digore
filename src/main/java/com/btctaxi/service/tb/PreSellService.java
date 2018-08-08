@@ -1,7 +1,7 @@
 package com.btctaxi.service.tb;
 
-import genesis.common.Data;
-import genesis.common.DataMap;
+import com.btctaxi.common.Data;
+import com.btctaxi.common.DataMap;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.FastDateFormat;
 import org.springframework.beans.factory.annotation.Autowired;

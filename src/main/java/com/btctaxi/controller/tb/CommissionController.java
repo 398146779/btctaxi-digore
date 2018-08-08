@@ -1,11 +1,11 @@
-package genesis.accounting.controller.tb;
+package com.btctaxi.controller.tb;
 
 import com.google.common.collect.Lists;
-import genesis.accounting.config.CommonConfig;
-import genesis.accounting.config.RedisKeyConfig;
-import genesis.accounting.dao.tb.TbRefundCommissionRepository;
-import genesis.accounting.service.tb.TbCommissionService;
-import genesis.common.Data;
+import com.btctaxi.config.CommonConfig;
+import com.btctaxi.config.RedisKeyConfig;
+import com.btctaxi.dao.tb.TbRefundCommissionRepository;
+import com.btctaxi.service.tb.TbCommissionService;
+import com.btctaxi.common.Data;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -26,7 +26,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import static genesis.accounting.config.RedisKeyConfig.CHANGE_RATE_MINUTE;
+import static com.btctaxi.config.RedisKeyConfig.CHANGE_RATE_MINUTE;
 
 /**
  * 邀请返佣
@@ -58,7 +58,9 @@ public class CommissionController {
     @Autowired
     private CommonConfig commonConfig;
 
-
+    /**
+     * 汇率按分钟放入redis
+     */
     @RequestMapping("/changeRateSnapshot")
     @ApiOperation("每分钟的汇率快照")
     public void changeRate() {
@@ -71,7 +73,6 @@ public class CommissionController {
         int minuteOfDay = now.getMinuteOfDay();
 //        redisTemplate.opsForList().set(k, minuteOfDay, changeRate);
         Long push = redisTemplate.opsForList().leftPush(k, changeRate);
-
     }
 
     //汇总 邀请 ID | 已经获取佣金 | 已获取返利

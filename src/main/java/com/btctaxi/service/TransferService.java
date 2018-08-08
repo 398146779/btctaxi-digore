@@ -1,12 +1,12 @@
 package com.btctaxi.service;
 
-import genesis.accounting.config.WalletConfig;
-import genesis.accounting.controller.support.ServiceError;
-import genesis.accounting.dao.AccountingBalanceRepository;
-import genesis.accounting.dao.AccountingTransferRepository;
-import genesis.accounting.domain.AccountingBalance;
-import genesis.accounting.domain.AccountingTransfer;
-import genesis.accounting.enums.TransferSide;
+import com.btctaxi.config.WalletConfig;
+import com.btctaxi.controller.support.ServiceError;
+import com.btctaxi.dao.AccountingBalanceRepository;
+import com.btctaxi.dao.AccountingTransferRepository;
+import com.btctaxi.domain.AccountingBalance;
+import com.btctaxi.domain.AccountingTransfer;
+import com.btctaxi.enums.TransferSide;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
-import static genesis.accounting.controller.support.ErrorCodeEnum.TRANSFER_BALANCE_NOT_ENOUGH;
+import static com.btctaxi.controller.support.ErrorCodeEnum.TRANSFER_BALANCE_NOT_ENOUGH;
 
 @Service
 @Slf4j

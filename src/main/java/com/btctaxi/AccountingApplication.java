@@ -9,14 +9,14 @@ import org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableAsync;
-//import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class, DataSourceAutoConfiguration.class}, scanBasePackages = "com")
 @EnableAsync
 @EnableAutoConfiguration
 //@EnableEurekaServer
 //@EnableDiscoveryClient
-//@EnableSwagger2
+@EnableSwagger2
 @Configuration
 @MapperScan("com.btctaxi.domain")
 public class AccountingApplication {

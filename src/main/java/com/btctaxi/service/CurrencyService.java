@@ -1,7 +1,7 @@
 package com.btctaxi.service;
 
-import genesis.common.Data;
-import genesis.common.DataMap;
+import com.btctaxi.common.Data;
+import com.btctaxi.common.DataMap;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
